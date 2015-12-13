@@ -1,0 +1,7 @@
+<template name="mainPage">
+  {{#if Template.subscriptionsReady}}
+    {{> postsList subReady=Template.subscriptionsReady}}
+  {{else}}
+    {{> loading}}
+  {{/if}}
+</template>

@@ -1,0 +1,14 @@
+<template name="postItem">
+  <div class="post">
+    <a href="#" class="upvote btn {{upvotedClass}}">⬆</a>
+    <div class="post-content">
+      <h3><a href="{{post.url}}">{{post.title}}</a><span>{{domain}}</span></h3>
+      <p>
+        {{pluralize post.votes "Vote"}},
+        submitted by {{post.author}}
+        {{#if ownPost}}<a href="/post/{{post._id}}/edit">Edit</a>{{/if}}
+      </p>
+    </div>
+    <a href="/post/{{post._id}}" class="discuss btn">Discuss</a>
+  </div>
+</template>

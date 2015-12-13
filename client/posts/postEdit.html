@@ -1,0 +1,30 @@
+<template name="postEdit">
+  {{#with post}}
+    <div class="col-sm-8 col-sm-offset-2">
+      <form class="main main-form">
+        <div class="control-group">
+          <label class="control-label" for="url">URL</label>
+
+          <div class="controls">
+            <input class="form-control" name="url" type="text" value="{{url}}" placeholder="Your URL"/>
+          </div>
+        </div>
+
+        <div class="control-group">
+          <label class="control-label" for="title">Title</label>
+
+          <div class="controls">
+            <input class="form-control" name="title" type="text" value="{{title}}" placeholder="Name your post"/>
+          </div>
+        </div>
+        <hr/>
+        <div class="control-group text-right">
+          <div class="controls btn-group">
+            <a class="btn btn-danger delete" href="#">Delete post</a>
+            <input type="submit" value="Submit" class="btn btn-primary submit"/>
+          </div>
+        </div>
+      </form>
+    </div>
+  {{/with}}
+</template>
